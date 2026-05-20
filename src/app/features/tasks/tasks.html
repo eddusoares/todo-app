@@ -1,0 +1,77 @@
+<div class="container">
+    <h1>Tarefas</h1>
+    <div class="card">
+        <input type="text" #newTask>
+        <div class="input-row">
+            <select name="" id="" #category>
+                @for( category of categories; track category){
+                <option value="{{category}}">{{category}}</option>
+                }
+            </select>
+            <button (click)="addTask(newTask.value, category.value)">+ Add</button>
+        </div>
+    </div>
+    <hr>
+    @if(checkCategory("Trabalho")){
+    <div class="category trabalho">
+        <div class="category-row">
+            <div class="dot"></div>
+            <p>Trabalho</p>
+            <span class="counter">{{checkCategory("Trabalho")}}</span>
+        </div>
+        @for (item of tasks(); track $index) {
+        @if(item.categoria === "Trabalho"){
+        <div class="task-card trabalho">
+            <div class="task-first-side">
+                <input type="checkbox" name="" id="{{item.titulo}}">
+                <label for="{{item.titulo}}" >{{item.titulo}}</label>
+            </div>
+            <span class="button-close" (click)="removeTask(item)">x</span>
+        </div>
+        }}
+    </div>
+
+    }
+    @if(checkCategory("Estudo")){
+    <div class="category estudo">
+        <div class="category-row">
+            <div class="dot"></div>
+            <p>Estudo</p>
+            <span class="counter">{{checkCategory("Estudo")}}</span>
+        </div>
+        @for (item of tasks(); track $index) {
+        @if(item.categoria === "Estudo"){
+        <div class="task-card estudo">
+            <div class="task-first-side">
+
+                <input type="checkbox" name="" id="{{item.titulo}}">
+                <label for="{{item.titulo}}">{{item.titulo}}</label>
+            </div>
+            <span class="button-close">x</span>
+        </div>
+        }
+        }
+    </div>
+    }
+    @if(checkCategory("Organização")){
+    <div class="category organizacao">
+        <div class="category-row">
+            <div class="dot"></div>
+            <p>Organização</p>
+            <span class="counter">{{checkCategory("Organização")}}</span>
+        </div>
+        @for (item of tasks(); track $index) {
+        @if(item.categoria === "Organização"){
+        <div class="task-card organizacao">
+            <div class="task-first-side">
+
+                <input type="checkbox" name="" id="{{item.titulo}}">
+                <label for="{{item.titulo}}">{{item.titulo}}</label>
+            </div>
+            <span class="button-close">x</span>
+        </div>
+        }
+        }
+    </div>
+    }
+</div>

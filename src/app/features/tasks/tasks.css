@@ -1,0 +1,111 @@
+.container {
+    width: 250px;
+    border: 1px solid gray;
+    border-radius: 12px;
+    padding: 40px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    background: rgb(20, 20, 20);
+    border-radius: 10px;
+
+    input {
+        background: rgb(34, 34, 34);
+        border: 1px solid gray;
+        border-radius: 8px;
+        line-height: 2;
+        color: whitesmoke;
+    }
+
+    select {
+        background: rgb(34, 34, 34);
+        border: 1px solid gray;
+        border-radius: 8px;
+        line-height: 2;
+        color: whitesmoke;
+        padding: 10px 4px;
+    }
+
+    button {
+        background: rgb(62, 55, 204);
+        border: none;
+        border-radius: 8px;
+        line-height: 1.6;
+        color: whitesmoke;
+        padding: 10px 14px;
+    }
+}
+
+.input-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.category {}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border: 0px;
+    border-radius: 50%;
+
+}
+
+.trabalho {
+    .dot {
+        background: rgb(62, 55, 204);
+    }
+}
+
+.estudo {
+    .dot {
+        background: rgb(188, 73, 53);
+    }
+}
+
+.organizacao {
+    .dot {
+        background: rgb(66, 144, 44);
+    }
+}
+
+.category-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.task-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: rgb(20, 20, 20);
+    padding: 8px 4px;
+    gap: 8px;
+    border-radius: 8px;
+    span{
+        margin-right: 4px;
+        cursor: pointer;
+        padding: 4px;
+    }
+}
+
+.task-first-side {
+    label {
+        margin-left: 8px;
+        line-height: 1.4;
+    }
+
+    input[type="checkbox"] {
+        background: rgb(34, 102, 162) !important;
+    }
+}
